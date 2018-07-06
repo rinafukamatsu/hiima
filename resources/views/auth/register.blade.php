@@ -13,7 +13,12 @@
                     {!! Form::label('nickname', 'Nickname') !!}
                     {!! Form::text('nickname', old('nickname'), ['class' => 'form-control']) !!}
                 </div>
-
+                
+                 <div class="form-group">
+                    {!! Form::label('hiima_id', 'ID') !!}
+                    {!! Form::text('hiima_id', old('hiima_id'), ['class' => 'form-control']) !!}
+                </div>               
+                
 
                 <div class="form-group">
                     {!! Form::label('password', 'Password') !!}

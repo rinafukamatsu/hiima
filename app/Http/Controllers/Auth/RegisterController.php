@@ -45,6 +45,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'nickname' => 'required|string|max:255',
+            'hiima_id' => 'required|string|hiima_id|max:191|unique:users',//追加りさ
             'password' => 'required|string|min:6|confirmed',
             //email消したよ（りな）
         ]);
@@ -60,6 +61,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'nickname' => $data['nickname'],//nicknameに変えたよ（りな）
+            'hiima_id' => $data['hiima_id'],
             'password' => bcrypt($data['password']),
             //email消したよ（りな）
         ]);
