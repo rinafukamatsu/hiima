@@ -45,7 +45,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'nickname' => 'required|string|max:255',
-            'hiima_id' => 'required|string|hiima_id|max:191|unique:users',//追加りさ
+            'hiima_id' => 'required|string|max:191|unique:users',//追加りさ
             'password' => 'required|string|min:6|confirmed',
             //email消したよ（りな）
         ]);
